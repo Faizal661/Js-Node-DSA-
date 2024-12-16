@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+<script>
+    document.addEventListener('click', e => {
+            const x = e.clientX
+            const y = e.clientY
+            const radius = Math.floor(Math.random() * 10 + Math.random() * 70)
+            const randomColor = (Math.floor(Math.random() * 10000)).toString(16)
+            const borderRad= Math.floor(Math.random() * 50)
+
+            const div = document.createElement('div')
+            div.classList.add('circle')
+            div.style.borderRadius=borderRad+'%'
+            div.style.width = radius * 2 + 'px'
+            div.style.height = radius * 2 + 'px'
+            div.style.top = y - (radius) + 'px'
+            div.style.left = x - (radius) + 'px'
+            div.style.backgroundColor = '#' + randomColor
+
+            const cicles = document.querySelectorAll('div')
+            console.log(cicles)
+            if (cicles.length === 2) {
+                cicles.forEach(circle => {
+                    document.body.removeChild(circle)
+                })
+            }
+            document.body.appendChild(div)
+            
+    }) 
+</script>
+
+</html>
