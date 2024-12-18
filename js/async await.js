@@ -1,4 +1,4 @@
-// promise 
+//====================> promise 
 
 function fetchData() {
     return new Promise((resolve, reject) => {
@@ -8,15 +8,17 @@ function fetchData() {
     });
 }
 
-// fetchData()
-//     .then(data => {
-//         console.log(data);
-//     })
-//     .catch(error => {
-//         console.error(error);
-//     });
+fetchData()
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error(error);
+    });
 
-//async await 
+
+
+//=============> async await 
 
 async function fetchDataAsync() {
     try {
