@@ -7,7 +7,7 @@ let promise = new Promise((resolve, reject) => {
         }else{
             reject('error occured')
         }
-    }, 1000)
+    }, 3000)
 })
 
 promise.then((result) => {
@@ -40,5 +40,5 @@ promise.then((result) => {
 }).catch((err)=>{
     console.log(err)
 }).finally(()=>{
-    console.log('finally is happende')
+    console.log('finally is happened')
 })

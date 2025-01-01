@@ -15,9 +15,12 @@ const products = [
 // const totalProductPrice = products.reduce((accumulator, product) => accumulator + product.price, 0);
 // console.log(totalProductPrice); // 5.27 (sum of all prices)
 
+const filteredProducts=products.filter(prod=> prod.price>1)
+console.log(filteredProducts)
 
-const mostExpensiveProduct = products.reduce((highest, current) => (highest.price > current.price ? highest : current), products[0]);
-console.log(mostExpensiveProduct); // Product with highest price
+
+// const mostExpensiveProduct = products.reduce((highest, current) => (current.price > highest.price ? current : highest), products[0]);
+// console.log(mostExpensiveProduct); // Product with highest price
 
 
 

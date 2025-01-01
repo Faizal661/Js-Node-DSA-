@@ -1,20 +1,30 @@
-const myPromise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        const success = true; //  false to test the reject 
+// Promises are objects representing eventual completion/failure of an asynchronous operation.
+// They have three states: pending, fulfilled, rejected.
 
-        if (success) {
-            resolve('Operation was successful!');
-        } else {
-            reject('Operation failed!');
-        }
-    }, 1000);
-});
-
-
-myPromise
-    .then((message) => {
-        console.log(message); // This will log "Operation was successful!" if the promise is resolved
-    })
-    .catch((error) => {
-        console.error(error); // This will log "Operation failed!" if the promise is rejected
+function fetchDataPromise() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const success = Math.random() > 0.5;
+            if (success) {
+                resolve({ id: 1, name: 'Example' });
+            } else {
+                reject(new Error('Failed to fetch data'));
+            }
+        }, 1000);
     });
+}
+
+// fetchDataPromise()
+//     .then(data => console.log(data))
+//     .catch(error => console.error(error));
+
+
+async function fetchDataAsync() {
+    try {
+        const data = await fetchDataPromise();
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}
+fetchDataAsync()

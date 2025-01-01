@@ -3,18 +3,23 @@
 function fetchData() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve('Data fetched');
-        }, 2000);
+            const success = Math.random() > 0.5;
+            if (success) {
+                resolve({ id: 1, name: 'Example' });
+            } else {
+                reject(new Error('Failed to fetch data'));
+            }
+        }, 1000);
     });
 }
 
-fetchData()
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => {
-        console.error(error);
-    });
+// fetchData()
+//     .then(data => {
+//         console.log(data);
+//     })
+//     .catch(error => {
+//         console.error(error);
+//     });
 
 
 
@@ -26,6 +31,8 @@ async function fetchDataAsync() {
         console.log(data);
     } catch (error) {
         console.error(error);
+    }finally{
+        console.log('end..')
     }
 }
 

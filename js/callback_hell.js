@@ -1,3 +1,5 @@
+// Callback hell is when multiple nested callbacks create code that's hard to read and maintain.
+
 function task1(callback){
     setTimeout(()=>{
         console.log('task1 completed')
@@ -29,10 +31,3 @@ task1(()=>{
 
 
 
-// const a = Promise.resolve(Promise.reject()).catch(() => "ERRR")
-
-//     a.then((o) => console.log(o))
-//         .catch((error) => console.error(error))
-
-
-        

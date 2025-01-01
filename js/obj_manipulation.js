@@ -8,3 +8,6 @@ console.log(merged);
 // let person = { name: "Alice", details: { age: 30, city: "Wonderland" } };  //deep copy
 // let deepCopy = JSON.parse(JSON.stringify(person));
 // console.log(deepCopy); // { name: 'Alice', details: { age: 30, city: 'Wonderland' } }
+
+
+
