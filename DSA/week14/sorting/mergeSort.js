@@ -24,41 +24,40 @@ function merge(leftArr, rightArr) {
     return [...sortedArr, ...leftArr, ...rightArr]
 }
 
+console.log(arr)            
+console.log()
+console.log(mergeSort(arr))   
 
 
 
 
-function mergeSortStrings(str) {
-    if (str.length <= 1) {
-        return str;
-    }
-    const middle = Math.floor(str.length / 2);
-    const leftHalf = str.substring(0, middle);
-    const rightHalf = str.substring(middle);
+// function mergeSortStrings(str) {
+//     if (str.length <= 1) {
+//         return str;
+//     }
+//     const middle = Math.floor(str.length / 2);
+//     const leftHalf = str.substring(0, middle);
+//     const rightHalf = str.substring(middle);
 
-    return mergeStrings(mergeSortStrings(leftHalf), mergeSortStrings(rightHalf)).join('');
-}
-function mergeStrings(left, right) {
-    const result = [];
-    let leftIndex = 0;
-    let rightIndex = 0;
+//     return mergeStrings(mergeSortStrings(leftHalf), mergeSortStrings(rightHalf)).join('');
+// }
+// function mergeStrings(left, right) {
+//     const result = [];
+//     let leftIndex = 0;
+//     let rightIndex = 0;
 
-    while (leftIndex < left.length && rightIndex < right.length) {
-        if (left[leftIndex] <= right[rightIndex]) {
-            result.push(left[leftIndex]);
-            leftIndex++;
-        } else {
-            result.push(right[rightIndex]);
-            rightIndex++;
-        }
-    }
-    return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
-}
+//     while (leftIndex < left.length && rightIndex < right.length) {
+//         if (left[leftIndex] <= right[rightIndex]) {
+//             result.push(left[leftIndex]);
+//             leftIndex++;
+//         } else {
+//             result.push(right[rightIndex]);
+//             rightIndex++;
+//         }
+//     }
+//     return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+// }
 
-const inputString = "hello world";
-const sortedString = mergeSortStrings(inputString);
-console.log(sortedString);
-
-// console.log(arr)            
-// console.log()
-// console.log(mergeSort(arr))   
+// const inputString = "hello world";
+// const sortedString = mergeSortStrings(inputString);
+// console.log(sortedString);

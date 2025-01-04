@@ -17,9 +17,9 @@ function quickSortDescending(arr) {
     return [...quickSortDescending(left), pivot, ...quickSortDescending(right)]
 }
 
-// const arr = [8, - 4, 20, -6, 2]
-// console.log('Unsorted Array', arr)
-// console.log('Sorted Array  ',quickSortDescending(arr))   
+const arr = [8, - 4, 20, -6, 2]
+console.log('Unsorted Array', arr)
+console.log('Sorted Array  ',quickSortDescending(arr))   
 
 
 // function quickSortObjects(arr, property) {
