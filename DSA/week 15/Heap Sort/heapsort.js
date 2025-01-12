@@ -15,6 +15,7 @@ function heapify(arr, n, i) {
     }
 }
 
+
 function heapSort(arr) {
     const n = arr.length;
     for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {

@@ -6,58 +6,59 @@ const { exec, spawn, fork, execFile } = require('child_process');
 // Executes a command in a shell and buffers the output.
 
 
-// exec('dir', (error, stdout, stderr) => {
-//     if (error) {
-//         console.error(`Error: ${error.message}`);
-//         return;
-//     }
-//     if (stderr) {
-//         console.error(`Stderr: ${stderr}`);
-//         return;
-//     }
-//     console.log(`Stdout: ${stdout}`);
-// });
+exec('dir', (error, stdout, stderr) => {
+    if (error) {
+        console.error(`Error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.error(`Stderr: ${stderr}`);
+        return;
+    }
+    console.log(`Stdout: ${stdout}`);
+});
 
 
 
 // Spawns a new process with the given command and arguments. It streams the output, making it suitable for large outputs.
 
-// const child = spawn('dir');
+const child = spawn('dir');
 
-// child.stdout.on('data', (data) => {
-//   console.log(`Stdout: ${data}`);
-// });
+child.stdout.on('data', (data) => {
+  console.log(`Stdout: ${data}`);
+});
 
-// child.stderr.on('data', (data) => {
-//   console.error(`Stderr: ${data}`);
-// });
+child.stderr.on('data', (data) => {
+  console.error(`Stderr: ${data}`);
+});
 
-// child.on('close', (code) => {
-//   console.log(`Child process exited with code ${code}`);
-// });
+child.on('close', (code) => {
+  console.log(`Child process exited with code ${code}`);
+});
 
 
-// execFile('node', ['--version'], (error, stdout, stderr) => {
-//     if (error) {
-//         console.error(`Error: ${error.message}`);
-//         return;
-//     }
-//     if (stderr) {
-//         console.error(`Stderr: ${stderr}`);
-//         return;
-//     }
-//     console.log(`Stdout: ${stdout}`);
-// });
+
+execFile('node', ['--version'], (error, stdout, stderr) => {
+    if (error) {
+        console.error(`Error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.error(`Stderr: ${stderr}`);
+        return;
+    }
+    console.log(`Stdout: ${stdout}`);
+});
 
 
 
 // Spawns a new Node.js process to execute a module. This is designed for inter-process communication (IPC).
 
 
-const child = fork('./Node/cluster.js');
+const child2 = fork('./Node/cluster.js');
 
-child.on('message', (message) => {
+child2.on('message', (message) => {
   console.log('Message from child:', message);
 });
 
-child.send({ greeting: 'Hello from parent' });
+child2.send({ greeting: 'Hello from parent' });

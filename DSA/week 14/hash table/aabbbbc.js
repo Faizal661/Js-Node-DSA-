@@ -52,7 +52,7 @@ class HashTable {
 
 }
 
-const table = new HashTable(50);
+const table = new HashTable(5);
 
 const str = 'aabbbbcd'
 for (let i = 0; i < str.length; i++) {
