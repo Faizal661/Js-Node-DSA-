@@ -1,0 +1,18 @@
+Hash table collision handling methods are techniques used to resolve collisions, which occur when two keys hash to the same index in a hash table.
+
+There are several collision handling methods, including:
+
+1. **Separate Chaining**: This method uses a linked list to store colliding keys. Each bucket in the hash table contains a linked list of entries that hash to the same index.
+2. **Open Addressing**: This method uses a probing technique to find an empty slot in the hash table. When a collision occurs, the table is probed to find an empty slot, and the colliding key is stored there.
+3. **Linear Probing**: This is a type of open addressing where the table is probed linearly, starting from the index of the colliding key.
+4. **Double Hashing**: This is another type of open addressing where two hash functions are used to probe the table.
+5. **Quadratic Probing**: This is a type of open addressing where the table is probed using a quadratic function.
+6. **Coalesced Hashing**: This method uses a combination of separate chaining and open addressing to handle collisions.
+7. **Cuckoo Hashing**: This method uses a technique called "cuckooing" to move colliding keys to a different index in the hash table.
+8. **Robin Hood Hashing**: This method uses a technique called "robbing" to move colliding keys to a different index in the hash table.
+9. **2-Choice Hashing**: This method uses two hash functions to probe the table and find an empty slot.
+10. **Hopscotch Hashing**: This method uses a technique called "hopscotching" to move colliding keys to a different index in the hash table.
+
+These are some of the common collision handling methods used in hash tables. The choice of method depends on the specific requirements of the application and the characteristics of the data being stored.
+
+Would you like to know more about a specific collision handling method?

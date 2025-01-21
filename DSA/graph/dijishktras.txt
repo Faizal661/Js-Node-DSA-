@@ -1,0 +1,42 @@
+**Dijkstra's Algorithm**
+
+Dijkstra's algorithm is a popular algorithm used to find the shortest paths between nodes in a graph, particularly in weighted graphs where each edge has a numerical weight assigned to it. It's named after its creator, Edsger W. Dijkstra, who conceived it in 1956 and published it three years later.
+
+**Key Concepts**
+
+* **Weighted Graph:** A graph where each edge has a numerical weight associated with it, representing the cost or distance of traversing that edge.
+* **Shortest Path:** The path between two nodes in a graph with the minimum total weight of its edges.
+* **Greedy Approach:** Dijkstra's algorithm employs a greedy approach, meaning it makes the locally optimal choice at each step, hoping that this will lead to the globally optimal solution.
+
+**How it Works**
+
+1. **Initialization:**
+   * Set the distance to the source node as 0.
+   * Set the distance to all other nodes as infinity.
+   * Create a set of unvisited nodes.
+
+2. **Iteration:**
+   * Select the unvisited node with the smallest distance from the source node.
+   * Mark the selected node as visited.
+   * For each unvisited neighbor of the selected node:
+     * Calculate the tentative distance from the source node through the selected node.
+     * If the tentative distance is smaller than the current distance, update the distance.
+
+3. **Termination:**
+   * Repeat step 2 until all nodes have been visited.
+
+**Applications**
+
+* **Routing protocols:** Finding the shortest paths in networks like the internet.
+* **GPS navigation:** Calculating the shortest routes between locations.
+* **Transportation planning:** Optimizing routes for public transportation or delivery services.
+* **Network analysis:** Identifying critical paths in networks.
+
+**Time Complexity**
+
+* **Adjacency matrix representation:** O(V^2), where V is the number of vertices.
+* **Adjacency list representation:** O((V + E) log V), where E is the number of edges.
+
+**Important Note:**
+
+Dijkstra's algorithm works correctly only for graphs with non-negative edge weights. If there are negative weights, other algorithms like Bellman-Ford or A* search can be used.
