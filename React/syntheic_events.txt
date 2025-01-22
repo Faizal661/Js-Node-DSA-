@@ -1,0 +1,3 @@
+A Synthetic Event in React is a wrapper around the native DOM event system. It provides a consistent, cross-browser interface to handle events in React applications, ensuring that event behavior remains uniform across different browsers.
+
+In React, Synthetic Events cover a wide range of DOM events, including mouse, keyboard, focus, form, touch, and more. Below are examples of commonly used synthetic events in different categories:
