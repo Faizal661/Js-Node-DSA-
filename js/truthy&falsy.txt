@@ -1,0 +1,21 @@
+Falsy values in JavaScript are values that evaluate to false when used in a boolean context. These values include:
+
+false
+0
+-0
+"" //(empty string)
+null
+undefined
+NaN //(Not a Number)
+
+
+
+
+A truthy value is any value that is not falsy. This means almost all values in JavaScript are truthy.
+
+true (the boolean true)
+Non-zero numbers (e.g., 42, -1, 3.14)
+Non-empty strings (e.g., "hello", 'false')
+Arrays (even empty ones, [])
+Objects (even empty ones, {})
+The special value Infinity or -Infinity

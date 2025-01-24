@@ -1,0 +1,23 @@
+Boxing in JavaScript refers to the process of converting a primitive value (e.g., a string, number, or boolean) into an object so that it can access object-like properties and methods.
+
+This is done implicitly by JavaScript when you try to access methods or properties on a primitive value, even though primitives themselves are not objects.
+
+
+const str = "hello";
+
+// Boxing happens here
+console.log(str.toUpperCase()); // "HELLO"
+
+
+
+
+
+Unboxing:
+Unboxing is the reverse process, where an object wrapper is converted back to a primitive value. JavaScript does this implicitly when you use wrapper objects in operations that require primitives.
+
+Example of Unboxing:
+javascript
+Copy
+Edit
+const numObj = new Number(42); // A Number object
+console.log(numObj + 8);       // Unboxing happens: 42 + 8 = 50

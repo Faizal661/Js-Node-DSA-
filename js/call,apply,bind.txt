@@ -1,0 +1,81 @@
+In JavaScript, `call`, `apply`, and `bind` are methods used to control the **`this` context** of a function. Here's a simple explanation of each, along with examples:
+
+---
+
+### **1. `call`**
+- **What it does**: Invokes a function immediately with a specific `this` value and arguments provided one by one.
+- **Syntax**: `function.call(thisArg, arg1, arg2, ...)`
+
+#### Example:
+```javascript
+function greet(greeting, punctuation) {
+  console.log(`${greeting}, ${this.name}${punctuation}`);
+}
+
+const person = { name: 'Faizal' };
+
+// Using `call` to set `this` to `person` and pass arguments
+greet.call(person, 'Hello', '!'); // Output: Hello, Faizal!
+```
+
+---
+
+### **2. `apply`**
+- **What it does**: Similar to `call`, but arguments are provided as an array.
+- **Syntax**: `function.apply(thisArg, [arg1, arg2, ...])`
+
+#### Example:
+```javascript
+function greet(greeting, punctuation) {
+  console.log(`${greeting}, ${this.name}${punctuation}`);
+}
+
+const person = { name: 'Faizal' };
+
+// Using `apply` to set `this` to `person` and pass arguments as an array
+greet.apply(person, ['Hello', '!']); // Output: Hello, Faizal!
+```
+
+#### Key Difference Between `call` and `apply`:
+- `call`: Arguments are passed individually.
+- `apply`: Arguments are passed as an array.
+
+---
+
+### **3. `bind`**
+- **What it does**: Returns a **new function** with the `this` value bound to the specified object. Unlike `call` and `apply`, it **does not invoke the function immediately**.
+- **Syntax**: `function.bind(thisArg, arg1, arg2, ...)`
+
+#### Example:
+```javascript
+function greet(greeting, punctuation) {
+  console.log(`${greeting}, ${this.name}${punctuation}`);
+}
+
+const person = { name: 'Faizal' };
+
+// Using `bind` to create a new function with `this` bound to `person`
+const greetFaizal = greet.bind(person, 'Hello');
+greetFaizal('!'); // Output: Hello, Faizal!
+```
+
+#### Key Difference:
+- `bind` creates a new function that can be called later, whereas `call` and `apply` execute the function immediately.
+
+---
+
+### **Comparison Table**
+
+| Method   | Invokes Immediately? | Pass Arguments as | Returns |
+|----------|-----------------------|-------------------|---------|
+| `call`   | Yes                   | Individual values | Result of the function |
+| `apply`  | Yes                   | Array             | Result of the function |
+| `bind`   | No                    | Individual values | A new function |
+
+---
+
+### When to Use Each?
+1. **Use `call`** when you want to invoke a function immediately and pass arguments individually.
+2. **Use `apply`** when you want to invoke a function immediately and pass arguments as an array.
+3. **Use `bind`** when you need a function to be called later with a specific `this` value.
+

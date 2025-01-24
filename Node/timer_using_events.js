@@ -20,5 +20,5 @@ class Timer extends EventEmitter {
   timer.on('tick', (count) => console.log(`Tick: ${count}`));
   timer.on('end', () => console.log('Timer finished!'));
   
-  timer.start(5);
+  timer.start(5); 
   

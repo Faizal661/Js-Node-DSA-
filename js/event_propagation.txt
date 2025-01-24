@@ -1,0 +1,26 @@
+Event Propagation in JavaScript
+
+Event propagation refers to the mechanism that describes how events flow through the DOM when they are triggered. It occurs in three phases:
+
+    Capturing Phase (Event Capture): The event starts at the root of the DOM and travels down to the target element.
+    Target Phase: The event reaches the target element.
+    Bubbling Phase (Event Bubble): The event propagates back up from the target element to the root.
+
+
+
+Event Delegation
+
+    Event delegation is a technique where a single event listener is added to a parent element to handle events for its child elements. It works because of event bubbling.
+
+    Why Use Event Delegation?
+    Efficiently handle events for dynamically added elements.
+    Reduce the number of event listeners in your application.
+
+
+
+Preventing Event Propagation
+
+    stopPropagation()
+        Stops the event from propagating further in the DOM (both capturing and bubbling phases).
+    stopImmediatePropagation()
+        Prevents other listeners of the same event on the same element from being called.

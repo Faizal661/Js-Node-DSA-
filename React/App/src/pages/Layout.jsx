@@ -6,7 +6,7 @@ const Layout = () => {
         <div className="flex h-fit  ">
           <div className="border-black border-2 m-1 p-2 w-fit pr-12 pt-3 flex flex-col font-serif font-bold gap-1 rounded-md">
             <Link to="/useEffect.example">
-              <button>UseEffect example</button><hr />
+              <button>Timer</button><hr />
             </Link>
             <Link to="/To-do">
               <button> To do list </button><hr />
