@@ -1,6 +1,6 @@
 import "./App.css";
 import Layout from "./pages/Layout";
-import Parent from "./pages/Parent";
+import Parent from "./pages/childToParentDataPass/Parent";
 import Todo from "./pages/Todo";
 import Timer from "./pages/useEffect";
 import { Routes, Route } from "react-router-dom";
