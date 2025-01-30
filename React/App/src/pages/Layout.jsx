@@ -11,8 +11,8 @@ const Layout = () => {
             <Link to="/To-do">
               <button> To do list </button><hr />
             </Link>
-            <Link to="/useEffect.example">
-              <button> example 3</button>
+            <Link to="/childToParent">
+              <button>Child To Parent </button>
             </Link>
           </div>
 

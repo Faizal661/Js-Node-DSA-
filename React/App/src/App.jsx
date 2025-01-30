@@ -8,14 +8,14 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-    <Parent/>
-      {/* <Routes>
+    
+      <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="useEffect.example" element={<Timer />} />
           <Route path="To-do" element={<Todo />} />
-          <Route path="useEffect.example" element={<Timer />} />
+          <Route path="childToParent" element={<Parent/>} />
         </Route>
-      </Routes> */}
+      </Routes>
     </>
   );
 }
